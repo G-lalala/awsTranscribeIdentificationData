@@ -8,7 +8,9 @@ def main():
 	filename = input()
 	print ("Filename: ", filename)
     
+	# テキストファイルを用意
 	with codecs.open(filename+'.txt', 'w', 'utf-8') as w:
+		# Jsonファイルをオープン
 		with codecs.open(filename+'.json', 'r', 'utf-8') as f:
 			data=json.loads(f.read())
 			labels = data['results']['speaker_labels']['segments']
